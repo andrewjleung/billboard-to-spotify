@@ -15,7 +15,7 @@ class Cache():
         self.use_cache = use_cache
 
     def __enter__(self):
-        if exists(self.cache_path) and self.use_caches:
+        if exists(self.cache_path) and self.use_cache:
             with open(self.cache_path, "r", encoding="utf-8") as cache_file:
                 return json.load(cache_file)
 

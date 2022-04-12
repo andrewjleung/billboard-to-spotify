@@ -36,7 +36,7 @@ def get_chart_songs():
     songs = {}
 
     for name, member in Chart.__members__.items():
-        print(member.value)
+        # print(member.value)
         chart = billboard.ChartData(member.value)
 
         for entry in chart:
