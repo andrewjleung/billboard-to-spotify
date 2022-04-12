@@ -2,11 +2,11 @@ from dotenv import load_dotenv
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from billboard_to_spotify import BillboardToSpotify
-import bbfetch
+from get_billboard_songs import get_billboard_songs
 from cache import Cache
 
 
-BILLBOARD_TRACKS_FILENAME = "./bin/bb_tracks.json"
+BILLBOARD_TRACKS_FILENAME = "./bin/billboard_tracks.json"
 SPOTIFY_TRACK_IDS_FILENAME = "./bin/track_ids.json"
 TRACKS_DATASET_FILENAME = "./bin/tracks.csv"
 
@@ -19,7 +19,7 @@ bbts = BillboardToSpotify(spotify)
 
 print("Fetching songs from Billboard charts.")
 
-with Cache(BILLBOARD_TRACKS_FILENAME, bbfetch.get_chart_songs) as bb_tracks:
+with Cache(BILLBOARD_TRACKS_FILENAME, get_billboard_songs) as bb_tracks:
     print("Fetching track IDs.")
 
     with Cache(SPOTIFY_TRACK_IDS_FILENAME, lambda: bbts.find_tracks_ids(bb_tracks)) as track_ids:

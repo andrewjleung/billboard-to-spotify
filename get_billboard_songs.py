@@ -1,6 +1,5 @@
 import billboard
 from enum import Enum
-from cache import Cache
 
 
 class Chart(Enum):
@@ -28,7 +27,7 @@ class Chart(Enum):
     RHYTHMIC = "rhythmic"
 
 
-def get_chart_songs():
+def get_billboard_songs():
     """ Function:   get_chart_songs
         Parameters: none
         Return:     list, list of dicts containing each song's title and artist
