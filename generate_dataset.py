@@ -18,12 +18,11 @@ spotify = spotipy.Spotify(
 bbts = BillboardToSpotify(spotify)
 
 print("Fetching songs from Billboard charts.")
-
 bb_tracks = Cache(BILLBOARD_TRACKS_FILENAME, get_billboard_songs).get()
-track_ids = Cache(SPOTIFY_TRACK_IDS_FILENAME,
-                  lambda: bbts.find_tracks_ids(bb_tracks)).get()
 
 print("Fetching track IDs.")
+track_ids = Cache(SPOTIFY_TRACK_IDS_FILENAME,
+                  lambda: bbts.find_tracks_ids(bb_tracks)).get()
 
 tracks_metadata = {track_id: {} for track_id in track_ids}
 
