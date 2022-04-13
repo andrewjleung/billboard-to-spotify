@@ -1,5 +1,5 @@
-import billboard
 from enum import Enum
+import billboard
 
 
 class Chart(Enum):
@@ -34,7 +34,7 @@ def get_billboard_songs():
     """
     songs = {}
 
-    for name, member in Chart.__members__.items():
+    for _name, member in Chart.__members__.items():
         # print(member.value)
         chart = billboard.ChartData(member.value)
 
