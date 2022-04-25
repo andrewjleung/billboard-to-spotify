@@ -3,6 +3,7 @@ import re
 
 MULTI_ARTIST_DELIM_REGEX = re.compile(
     r"[+&\/]|, |Featuring|With|[Vv]s.| [Xx] ")
+
 MAX_ARTIST_LENGTH = 40
 MAX_TRACKS = 50
 MAX_AUDIO_FEATURES = 100
@@ -23,18 +24,17 @@ AUDIO_FEATURES = [
 ]
 
 """
-These are track title/artist edge cases that don't turn up in searches via the Spotify API as-is 
+These are track title/artist edge cases that don't turn up in searches via the Spotify API as-is
 from Billboard, but are clearly on Spotify.
 
 As of 04/12/2022, there are a few cases which are charting on Billboard but don't have a clear
 counterpart on Spotify.
 
-These include:
-- 'Change The World' by Chris Standring
-- 'G Wiggle' by Gerald Albright
-- 'Crunk/Slow Down' by Showtek
-- 'Dance! 2013' by Lumidee Vs. Fatman Scoop
-- 'Alright/Together' by Mark Knight
+These include: 
+- 'Change The World' by Chris Standring 
+- 'G Wiggle' by Gerald Albright - 'Crunk/Slow Down' by Showtek 
+- 'Dance! 2013' by Lumidee Vs. Fatman Scoop 
+- 'Alright/Together' by Mark Knight 
 - 'Love Hangover 2020' by Diana Ross
 """
 EDGE_CASES = {

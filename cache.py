@@ -22,9 +22,8 @@ class Cache():
         pass
 
     def get(self):
-        """ Function:   get
-            Parameters: none
-            Return:     any, the result of this Cache's computation if no cache exists or the cache 
+        """ Function:   get Parameters: none Return:     any, the result of this Cache's computation
+            if no cache exists or the cache 
                         if it does
         """
         if exists(self.cache_path) and self.use_cache:
