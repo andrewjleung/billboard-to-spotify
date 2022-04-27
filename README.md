@@ -37,7 +37,7 @@ To then generate the dataset, run the `generate_dataset.py` script:
 python3 generate_dataset.py
 ```
 
-### Cached Data
+## Cached Data
 
 The `generate_dataset.py` script will automatically utilize custom caches for expensive and lengthy
 requests to Billboard and Spotify if they are present. More specifically, tracks fetched from
@@ -51,3 +51,7 @@ Sample files of each intermediate cached piece of data along with the final data
 - `billboard_tracks.json` : track titles and artists fetched from Billboard
 - `track_ids.json` : track Spotify IDs fetched from the Spotify API search endpoint
 - `tracks.csv` : the final dataset with popularity and audio features metadata for each song
+
+## Data Analysis
+
+A notebook containing all group data analysis is included within `tracks-analysis.ipynb`.
