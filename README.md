@@ -45,3 +45,9 @@ Billboard and track IDs are cached within separate files in the `bin` folder.
 
 To generate a completely fresh and updated dataset, delete the files within the `bin` folder and
 regenerate the dataset. This may take a couple minutes.
+
+Sample files of each intermediate cached piece of data along with the final dataset are included:
+
+- `billboard_tracks.json` : track titles and artists fetched from Billboard
+- `track_ids.json` : track Spotify IDs fetched from the Spotify API search endpoint
+- `tracks.csv` : the final dataset with popularity and audio features metadata for each song
